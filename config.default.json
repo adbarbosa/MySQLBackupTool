@@ -5,8 +5,6 @@
     "host": "192.168.1.101",
     "path_to_backup": "~/backup/mysql/",
     "database_to_backup": [
-        "portal",
-        "portal.recover",
-        "www.imagemurbana.pt"
+        "database_name"
     ]
 }
