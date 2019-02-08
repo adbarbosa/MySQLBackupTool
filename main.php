@@ -67,7 +67,7 @@ foreach($arrConfig['database_to_backup'] as $pos => $db) {
 
 foreach ($arrConfig['database_to_backup'] as $pos => $db) {
     if($arrConfig["debug"] == 1) echo "\nStart backup of database: " . $db . " ";
-    $db_backup_file = "/mysqldump_".$arrConfig['host']."_".$db."_".date("YmdHs").".sql";
+    $db_backup_file = "/mysqldump_".$arrConfig['host']."_".$db."_".date("YmdHis").".sql";
     exec("mysqldump -u ".$arrConfig['user']." -p".$arrConfig['pass']." -h ".$arrConfig['host']." ".$db." > ".$arrConfig["path_to_backup"].$db_backup_file, $output, $return_var);
     if($arrConfig["debug"] == 1) echo " Complete!\n";
 }
