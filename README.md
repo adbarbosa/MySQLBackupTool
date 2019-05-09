@@ -2,7 +2,7 @@
 PHP script to backup several databases in one server.
 
 ## How to install ##
-1. First clone the reposito using 
+1. First create folder MySQLBackupTool, enter it and clone the repository using 
 ```bash
 git clone https://github.com/adbarbosa/MySQLBackupTool.git
 ```
