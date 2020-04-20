@@ -1,14 +1,12 @@
 #!/usr/bin/php
 <?php
+define("VERSION", "0.2.1");
+
 // Path to config file in JSON format
 echo "\n";
 echo "+-----------------------------+\n";
 echo "| ADBSoft - MySQL Backup Tool |\n";
 echo "+-----------------------------+\n";
-
-if($arrConfig["debug"] == 1) {
-    echo "\nversion: 0.2.1\n";
-}
 
 require_once __DIR__ . "/func.php";
 
@@ -32,6 +30,10 @@ else {
     // Print error
     echo "\nERROR: Config file not found!!\n";
     exit("\n*** END ***\n");
+}
+
+if($arrConfig["debug"] == 1) {
+    echo "\nversion: " . VERSION . "\n";
 }
 
 // Get absolute path to backup folder
