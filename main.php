@@ -2,9 +2,13 @@
 <?php
 // Path to config file in JSON format
 echo "\n";
-echo "============================\n";
-echo " ADBSoft - MySQL Backup Tool\n";
-echo "============================\n";
+echo "+-----------------------------+\n";
+echo "| ADBSoft - MySQL Backup Tool |\n";
+echo "+-----------------------------+\n";
+
+if($arrConfig["debug"] == 1) {
+    echo "\nversion: 0.2.1\n";
+}
 
 require_once __DIR__ . "/func.php";
 
@@ -31,7 +35,7 @@ else {
 }
 
 // Get absolute path to backup folder
-$arrConfig["path_to_backup"] = get_absolute_path($arrConfig["path_to_backup"]);
+$arrConfig["path_to_backup"] = truepath($arrConfig["path_to_backup"]);
 
 if($arrConfig["debug"] == 1) {
     echo "\nAbsolute path to save backup file:\n";
