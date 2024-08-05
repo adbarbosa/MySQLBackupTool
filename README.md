@@ -15,7 +15,7 @@ cp config.default.json config.json
 
 4. change permissions to execute the file main.php:
 ```bash
-sudo chown +x main.php
+sudo chmod +x main.php
 ```
 
 5. To make a backup of the databases simply run the following command inside folder **MySQLBackupTool**:
